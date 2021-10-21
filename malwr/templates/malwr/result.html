@@ -1,0 +1,28 @@
+{% extends 'malwr/base.html' %}
+{% load static %}
+{% block content %}
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{% static 'css/tables.css' %}">
+<div>
+	<h1>Search Results</h1>
+</div>
+<div>
+	<table class="tab-1">
+		<tr>
+			<th>Type</th>
+			<th>Hash</th>
+			<th>Architecture</th>
+			<th>Timestamp</th>
+		</tr>
+		<tr>
+			{% for i in object_list %}
+			<td>{{ i.type }}</td>
+			<td>{{ i.md5 }}</td>
+			<td>{{ i.arch }}</td>
+			<td>{{ i.timestamp}}</td>
+			{% endfor %}
+		</tr>
+	</table>
+</div>
+
+{% endblock %}

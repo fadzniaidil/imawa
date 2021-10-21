@@ -1,0 +1,37 @@
+{% extends 'malwr/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{% static 'css/tables.css' %}">
+<div class="title">
+	<h1>Sample Library</h1>
+</div>
+<div class="tableset">
+	<div>
+		<table class="tab1">
+			<thead>
+				<tr>
+					<th>Type</th>
+					<th>Hash</th>
+					<th>Architecture</th>
+					<th>Timestamp</th>
+					<th>Status</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for i in data %}
+				<tr>
+					<td>{{ i.type }}</td>
+					<td>{{ i.md5 }}</td>
+					<td>{{ i.arch }}</td>
+					<td>{{ i.timestamp }}</td>
+					<td>{{ i.status }}</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</div>
+{% endblock %}

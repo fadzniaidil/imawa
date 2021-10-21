@@ -1,0 +1,77 @@
+*{
+	font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.xkban, .mainxk{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 5px 5%;
+}
+
+.xkban div{
+	padding: 15px;
+}
+
+.oklani{
+	align-items: center;
+	padding: 5px 15px 15px 15px;
+	background: #F4F4F4;
+	max-width: auto;
+	max-height: auto;
+	margin-right: 70px;
+	margin-left: 70px;
+}
+
+.butxk{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.button{
+	position: relative;
+	background: #F4F4F4;
+	color: #292743;
+	width: 15rem;
+	margin-bottom: 2rem;
+	border: none;
+	outline: none;
+	font-size: 15px;
+	cursor:pointer;
+	padding: 10px;
+	color: #1F8B8B;
+
+}
+
+.button::after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 0.175rem;
+	left: 0;
+	bottom: 0;
+	background: #1F8B8B;
+}
+
+.button::after{
+	transform: scale(0,1);
+	transition: transform 0.3s ease;
+}
+
+.button:focus::after,.button:hover::after{
+	transform: scale(1,1);
+}
+
+#classinfo{
+	display: none;
+}
+
+#sampleinfo{
+	display: block;
+}
+
+.about{
+	padding-bottom: 15px;
+}

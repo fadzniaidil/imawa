@@ -1,0 +1,351 @@
+{% extends 'malwr/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{% static 'css/display.css' %}">
+<script type="text/javascript" src="{% static 'js/home.js' %}"></script>
+{% if xkclass == 'Adware' %}
+
+{% for i in result %}
+<div class="xkban">
+	<div>
+		<img width="100px" height="100px" src="{% static 'image/adwarenb.png' %}">
+	</div>
+	<div class="xkresult">
+		<p>Registered Sample</p>
+		<p>Detection result : <span>{{ i.status }}</span></p>
+		<p>Class result : <span>{{ i.type }}</span></p>
+	</div>
+</div>
+<div class="mainxk">
+	<div class="butxk" id="button">
+		<button id="xksa" class="button" onclick="sampleshow()">Sample Info</button>
+		<button id="xkcl" class="button" onclick="classshow()">Class Info</button>
+	</div>
+</div>
+<div class="oklani">
+	<div class="infoclass" id="classinfo">
+		<p>Adware tracks a user’s surfing activity to determine which ads to serve them. Although adware is similar to spyware, it does not install any software on a user’s computer, nor does it capture keystrokes.</p>
+	</div>
+	<div class="infosample" id="sampleinfo">
+		<p>Size : <span>{{i.dataSize}}</span> bytes</p>
+		<p>Architecture : <span>{{ i.arch }}</span></p>
+		<p>MD5 : <span>{{i.md5}}</span></p>
+		<p>SHA1 : <span>{{i.sha1}}</span></p>
+		<p>SHA256 : <span>{{i.sha256}}</span></p>
+		<p>Timestamp : <span>{{i.timestamp}}</span></p>
+	</div>
+</div>
+{% endfor %}
+
+{% elif xkclass == 'Backdoor' %}
+
+{% for i in result %}
+<div class="xkban">
+	<div>
+		<img width="100px" height="100px" src="{% static 'image/Backdoornb.png' %}">
+	</div>
+	<div class="xkresult">
+		<p>Registered Sample</p>
+		<p>Detection result : <span>{{ i.status }}</span></p>
+		<p>Class result : <span>{{ i.type }}</span></p>
+	</div>
+</div>
+<div class="mainxk">
+	<div class="butxk" id="button">
+		<button id="xksa" class="button" onclick="sampleshow()">Sample Info</button>
+		<button id="xkcl" class="button" onclick="classshow()">Class Info</button>
+	</div>
+</div>
+<div class="oklani">
+	<div class="infoclass" id="classinfo">
+		<p>Type of trojan that enable attacker to take control of user system and can execute any malicious commands.Backdoor is use to steal confidential information from the target organization.</p>
+	</div>
+	<div class="infosample" id="sampleinfo">
+		<p>Size : <span>{{ i.dataSize }}</span> bytes</p>
+		<p>Architecture : <span>{{ i.arch }}</span></p>
+		<p>MD5 : <span>{{ i.md5 }}</span></p>
+		<p>SHA1 : <span>{{ i.sha1 }}</span></p>
+		<p>SHA256 : <span>{{ i.sha256 }}</span></p>
+		<p>Timestamp : <span>{{ i.timestamp }}</span></p>
+	</div>
+</div>
+{% endfor %}
+
+{% elif xkclass == 'Keylogger' %}
+
+{% for i in result %}
+<div class="xkban">
+	<div>
+		<img  width="100px" height="100px" src="{% static 'image/keyloggernb.png' %}">
+	</div>
+	<div class="xkresult">
+		<p>Registered Sample</p>
+		<p>Detection result : <span>{{ i.status }}</span></p>
+		<p>Class result : <span>{{ i.type }}</span></p>
+	</div>
+</div>
+<div class="mainxk">
+	<div class="butxk" id="button">
+		<button id="xksa" class="button" onclick="sampleshow()">Sample Info</button>
+		<button id="xkcl" class="button" onclick="classshow()">Class Info</button>
+	</div>
+</div>
+<div class="oklani">
+	<div class="infoclass" id="classinfo">
+		<p>Malware that designed to steal sensitive information data such as banking information then send it to attacker. Keylogger can be design whether in hardware or software and used to store keyboard keystroke and even can be send through email periodically.</p>
+	</div>
+	<div class="infosample" id="sampleinfo">
+		<p>Size : <span>{{ i.dataSize }}</span> bytes</p>
+		<p>Architecture : <span>{{ i.arch }}</span></p>
+		<p>MD5 : <span>{{ i.md5 }}</span></p>
+		<p>SHA1 : <span>{{ i.sha1 }}</span></p>
+		<p>SHA256 : <span>{{ i.sha256 }}</span></p>
+		<p>Timestamp : <span>{{ i.timestamp }}</span></p>
+	</div>
+</div>
+{% endfor %}
+
+{% elif xkclass == 'Ransomware' %}
+
+{% for i in result %}
+<div class="xkban">
+	<div>
+		<img  width="100px" height="100px" src="{% static 'image/ransomwarenb.png' %}">
+	</div>
+	<div class="xkresult">
+		<p>Registered Sample</p>
+		<p>Detection result : <span>{{ i.status }}</span></p>
+		<p>Class result : <span>{{ i.type }}</span></p>
+	</div>
+</div>
+<div class="mainxk">
+	<div class="butxk" id="button">
+		<button id="xksa" class="button" onclick="sampleshow()">Sample Info</button>
+		<button id="xkcl" class="button" onclick="classshow()">Class Info</button>
+	</div>
+</div>
+<div class="oklani">
+	<div class="infoclass" id="classinfo">
+		<p>Malware that holds the system for ransom by locking users out of their computer or by encrypting their files. Ransomware consider as most destructive malware because ability to encrypt entire system without user knowledge and asked user to pay very high ransom fee in order to decrypt the system back which is never happen.</p>
+	</div>
+	<div class="infosample" id="sampleinfo">
+		<p>Size : <span>{{ i.dataSize }}</span> bytes</p>
+		<p>Architecture : <span>{{ i.arch }}</span></p>
+		<p>MD5 : <span>{{ i.md5 }}</span></p>
+		<p>SHA1 : <span>{{ i.sha1 }}</span></p>
+		<p>SHA256 : <span>{{ i.sha256 }}</span></p>
+		<p>Timestamp : <span>{{ i.timestamp }}</span></p>
+	</div>
+</div>
+{% endfor %}
+
+{% elif xkclass == 'Rootkit' %}
+
+{% for i in result %}
+<div class="xkban">
+	<div>
+		<img  width="100px" height="100px" src="{% static 'image/Rootkitnb.png' %}">
+	</div>
+	<div class="xkresult">
+		<p>Registered Sample</p>
+		<p>Detection result : <span>{{ i.status }}</span></p>
+		<p>Class result : <span>{{ i.type }}</span></p>
+	</div>
+</div>
+<div class="mainxk">
+	<div class="butxk" id="button">
+		<button id="xksa" class="button" onclick="sampleshow()">Sample Info</button>
+		<button id="xkcl" class="button" onclick="classshow()">Class Info</button>
+	</div>
+</div>
+<div class="oklani">
+	<div class="infoclass" id="classinfo">
+		<p>Malware that give privileged access to attacker and its can hide presence from other software. Rootkit are consider as most stealthy malware because its ability to run at high privilege within the system and its ability to hidden other malware for maximizing the life time of a malware. </p>
+	</div>
+	<div class="infosample" id="sampleinfo">
+		<p>Size : <span>{{ i.dataSize }}</span> bytes</p>
+		<p>Architecture : <span>{{ i.arch }}</span></p>
+		<p>MD5 : <span>{{ i.md5 }}</span></p>
+		<p>SHA1 : <span>{{ i.sha1 }}</span></p>
+		<p>SHA256 : <span>{{ i.sha256 }}</span></p>
+		<p>Timestamp : <span>{{ i.timestamp }}</span></p>
+	</div>
+</div>
+{% endfor %}
+
+{% elif xkclass == 'Spyware' %}
+
+{% for i in result %}
+<div class="xkban">
+	<div>
+		<img  width="100px" height="100px" src="{% static 'image/spywarenb.png' %}">
+	</div>
+	<div class="xkresult">
+		<p>Registered Sample</p>
+		<p>Detection result : <span>{{ i.status }}</span></p>
+		<p>Class result : <span>{{ i.type }}</span></p>
+	</div>
+</div>
+<div class="mainxk">
+	<div class="butxk" id="button">
+		<button id="xksa" class="button" onclick="sampleshow()">Sample Info</button>
+		<button id="xkcl" class="button" onclick="classshow()">Class Info</button>
+	</div>
+</div>
+<div class="oklani">
+	<div class="infoclass" id="classinfo">
+		<p>Software with malicious behavior that aims to gather information about a person or organization and send such information to another entity in a way that harms the user; for example by violating their privacy or endangering their device's security.</p>
+	</div>
+	<div class="infosample" id="sampleinfo">
+		<p>Size : <span>{{ i.dataSize }}</span> bytes</p>
+		<p>Architecture : <span>{{ i.arch }}</span></p>
+		<p>MD5 : <span>{{ i.md5 }}</span></p>
+		<p>SHA1 : <span>{{ i.sha1 }}</span></p>
+		<p>SHA256 : <span>{{ i.sha256 }}</span></p>
+		<p>Timestamp : <span>{{ i.timestamp }}</span></p>
+	</div>
+</div>
+{% endfor %}
+
+{% elif xkclass == 'Trojan' %}
+
+{% for i in result %}
+<div class="xkban">
+	<div>
+		<img  width="150px" height="150px" src="{% static 'image/Trojannb.png' %}">
+	</div>
+	<div class="xkresult">
+		<p>Registered Sample</p>
+		<p>Detection result : <span>{{ i.status }}</span></p>
+		<p>Class result : <span>{{ i.type }}</span></p>
+	</div>
+</div>
+<div class="mainxk">
+	<div class="butxk" id="button">
+		<button id="xksa" class="button" onclick="sampleshow()">Sample Info</button>
+		<button id="xkcl" class="button" onclick="classshow()">Class Info</button>
+	</div>
+</div>
+<div class="oklani">
+	<div class="infoclass" id="classinfo">
+		<p>Malware that disguise itself to normal programs to trick user to install on their system. Once installed, the malware can perform malicious actions such as monitoring webcam, uploading and downloading files, or stealing document or important data from user.</p>
+	</div>
+	<div class="infosample" id="sampleinfo">
+		<p>Size : <span>{{ i.dataSize }}</span> bytes</p>
+		<p>Architecture : <span>{{ i.arch }}</span></p>
+		<p>MD5 : <span>{{ i.md5 }}</span></p>
+		<p>SHA1 : <span>{{ i.sha1 }}</span></p>
+		<p>SHA256 : <span>{{ i.sha256 }}</span></p>
+		<p>Timestamp : <span>{{ i.timestamp }}</span></p>
+	</div>
+</div>
+{% endfor %}
+
+{% elif xkclass == 'Virus' %}
+
+{% for i in result %}
+<div class="xkban">
+	<div>
+		<img  width="100px" height="100px" src="{% static 'image/virusnb.png' %}">
+	</div>
+	<div class="xkresult">
+		<p>Registered Sample</p>
+		<p>Detection result : <span>{{ i.status }}</span></p>
+		<p>Class result : <span>{{ i.type }}</span></p>
+	</div>
+</div>
+<div class="mainxk">
+	<div class="butxk" id="button">
+		<button id="xksa" class="button" onclick="sampleshow()">Sample Info</button>
+		<button id="xkcl" class="button" onclick="classshow()">Class Info</button>
+	</div>
+</div>
+<div class="oklani">
+	<div class="infoclass" id="classinfo">
+		<p>A virus is a piece of code that inserts itself into an application and executes when the app is run. Once inside a network, a virus may be used to steal sensitive data, launch DDoS attacks or conduct ransomware attacks. </p>
+	</div>
+	<div class="infosample" id="sampleinfo">
+		<p>Size : <span>{{ i.dataSize }}</span> bytes</p>
+		<p>Architecture : <span>{{ i.arch }}</span></p>
+		<p>MD5 : <span>{{ i.md5 }}</span></p>
+		<p>SHA1 : <span>{{ i.sha1 }}</span></p>
+		<p>SHA256 : <span>{{ i.sha256 }}</span></p>
+		<p>Timestamp : <span>{{ i.timestamp }}</span></p>
+	</div>
+</div>
+{% endfor %}
+
+
+{% elif xkclass == 'Worm' %}
+
+{% for i in result %}
+<div class="xkban">
+	<div>
+		<img  width="100px" height="100px" src="{% static 'image/wormnb.png' %}">
+	</div>
+	<div class="xkresult">
+		<p>Registered Sample</p>
+		<p>Detection result : <span>{{ i.status }}</span></p>
+		<p>Class result : <span>{{ i.type }}</span></p>
+	</div>
+</div>
+<div class="mainxk">
+	<div class="butxk" id="button">
+		<button id="xksa" class="button" onclick="sampleshow()">Sample Info</button>
+		<button id="xkcl" class="button" onclick="classshow()">Class Info</button>
+	</div>
+</div>
+<div class="oklani">
+	<div class="infoclass" id="classinfo">
+		<p>Worms target vulnerabilities in operating systems to install themselves into networks. They may gain access in several ways: through backdoors built into software, through unintentional software vulnerabilities, or through flash drives. Once in place, worms can be used by malicious actors to launch DDoS attacks, steal sensitive data, or conduct ransomware attacks.</p>
+	</div>
+	<div class="infosample" id="sampleinfo">
+		<p>Size : <span>{{ i.dataSize }}</span> bytes</p>
+		<p>Architecture : <span>{{ i.arch }}</span></p>
+		<p>MD5 : <span>{{ i.md5 }}</span></p>
+		<p>SHA1 : <span>{{ i.sha1 }}</span></p>
+		<p>SHA256 : <span>{{ i.sha256 }}</span></p>
+		<p>Timestamp : <span>{{ i.timestamp }}</span></p>
+	</div>
+</div>
+{% endfor %}
+
+{% else %}
+
+{% for i in result %}
+<div class="xkban">
+	<div>
+		<img  width="100px" height="100px" src="">
+	</div>
+	<div class="xkresult">
+		<p>Legitimate Sample</p>
+		<p>Detection result : <span>{{ i.status }}</span></p>
+		<p>Class result : <span>safe</span></p>
+	</div>
+</div>
+<div class="mainxk">
+	<div class="butxk" id="button">
+		<button id="xksa" class="button" onclick="sampleshow()">Sample Info</button>
+		<button id="xkcl" class="button" onclick="classshow()">Class Info</button>
+	</div>
+</div>
+<div class="oklani">
+	<div class="infoclass" id="classinfo">
+		<p>Safe file. Not Malicious</p>
+	</div>
+	<div class="infosample" id="sampleinfo">
+		<p>Size : <span>{{ i.dataSize }}</span> bytes</p>
+		<p>Architecture : <span>{{ i.arch }}</span></p>
+		<p>MD5 : <span>{{ i.md5 }}</span></p>
+		<p>SHA1 : <span>{{ i.sha1 }}</span></p>
+		<p>SHA256 : <span>{{ i.sha256 }}</span></p>
+		<p>Timestamp : <span>{{ i.timestamp }}</span></p>
+	</div>
+</div>
+{% endfor %}
+{% endif %}
+{% endblock %}

@@ -1,0 +1,54 @@
+*{
+	font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.tab1 {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 600px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.tab1 thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+.tab1 th,
+.tab1 td {
+    padding: 12px 15px;
+}
+
+.tab1 tbody tr {
+    border-bottom: 2px solid #dddddd;
+}
+
+.tab1 tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.tab1 tbody tr:last-of-type {
+    border-bottom: 4px solid #009879;
+}
+
+.tab1 tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+.tableset{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-height: auto;
+	max-width: auto;
+	margin-right: 100px;
+	margin-left: 100px;
+}
+
+.title{
+	text-align: center;
+}
