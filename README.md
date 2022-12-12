@@ -9,7 +9,7 @@
 
 - [Repo](https://github.com/fadzniaidil/imawa "imawa Repo")
 
-- [Live](<https://imawa.herokuapp.com/> "Live View")
+- [Live](<https://imawa.onrender.com/> "Live View")
 
 ## Screenshot
 - Homepage
