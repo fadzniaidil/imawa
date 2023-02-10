@@ -13,16 +13,16 @@
 
 ## Screenshot
 - Homepage
-![Home Page](/screenshot/home.png "Homepage")
+![Home Page](https://github.com/fadzniaidil/image/blob/main/home.png "Homepage")
 
 - Result
-![Result](/screenshot/result.png "Result")
+![Result](https://github.com/fadzniaidil/image/blob/main/result.png "Result")
 
 - Library
-![Library](/screenshot/library.png "Library")
+![Library](https://github.com/fadzniaidil/image/blob/main/library.png "Library")
 
 - About
-![About](/screenshot/about.png "About")
+![About](https://github.com/fadzniaidil/image/blob/main/about.png "About")
 
 ## Built With
 
