@@ -13,16 +13,16 @@
 
 ## Screenshot
 - Homepage
-![Home Page](https://github.com/fadzniaidil/image/blob/main/home.png "Homepage")
+![Home Page](https://github.com/fadzniaidil/image/blob/main/home.png)
 
 - Result
-![Result](https://github.com/fadzniaidil/image/blob/main/result.png "Result")
+![Result](https://github.com/fadzniaidil/image/blob/main/result.png )
 
 - Library
-![Library](https://github.com/fadzniaidil/image/blob/main/library.png "Library")
+![Library](https://github.com/fadzniaidil/image/blob/main/library.png)
 
 - About
-![About](https://github.com/fadzniaidil/image/blob/main/about.png "About")
+![About](https://github.com/fadzniaidil/image/blob/main/about.png )
 
 ## Built With
 
