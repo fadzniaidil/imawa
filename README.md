@@ -13,16 +13,16 @@
 
 ## Screenshot
 - Homepage
-![Home Page](https://github.com/fadzniaidil/image/blob/main/imawa/home.png)
+![Home Page](https://github.com/fadzniaidil/fadzniaidil/blob/main/project_image/imawa/home.png)
 
 - Result
-![Result](https://github.com/fadzniaidil/image/blob/main/imawa/result.png)
+![Result](https://github.com/fadzniaidil/fadzniaidil/blob/main/project_image/imawa/result.png)
 
 - Library
-![Library](https://github.com/fadzniaidil/image/blob/main/imawa/library.png)
+![Library](https://github.com/fadzniaidil/fadzniaidil/blob/main/project_image/imawa/library.png)
 
 - About
-![About](https://github.com/fadzniaidil/image/blob/main/imawa/about.png)
+![About](https://github.com/fadzniaidil/fadzniaidil/blob/main/project_image/imawa/about.png)
 
 ## Built With
 
